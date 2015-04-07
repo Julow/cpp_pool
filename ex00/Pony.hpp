@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 11:50:15 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 12:45:01 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 18:34:30 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class	Pony
 public:
 	Pony(std::string name);
 	~Pony(void);
-
+	void				say(void);
 private:
 	Pony(void);
 
