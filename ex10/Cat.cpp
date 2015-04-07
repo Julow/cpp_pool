@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 17:51:08 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 18:20:18 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 18:30:51 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,12 @@ void			Cat::_read(std::istream &in)
 	char			buff[BUFF_SIZE];
 
 	in.clear();
-	while (!in.eof())
+	while (true)
 	{
-		in.read(buff, BUFF_SIZE);
-		std::cout.write(buff, in.gcount());
+		in.getline(buff, BUFF_SIZE);
+		if (in.eof())
+			break ;
+		std::cout.write(buff, in.gcount() - 1);
+		std::cout << std::endl;
 	}
 }
