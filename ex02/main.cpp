@@ -6,13 +6,13 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 12:12:07 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 12:42:36 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 13:00:05 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieEvent.hpp"
 
-void			wave(ZombieEvent &event, std::string type, int len)
+void			wave(ZombieEvent &event, const char *type, int len)
 {
 	Zombie			*tmp;
 

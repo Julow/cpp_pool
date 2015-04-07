@@ -6,13 +6,13 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 12:12:07 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 12:19:19 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 12:59:01 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type)
+Zombie::Zombie(std::string const &name, std::string const &type)
 	: _name(name), _type(type)
 {
 	return ;

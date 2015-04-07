@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 12:12:07 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 12:39:46 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 12:59:44 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ public:
 	ZombieEvent(void);
 	~ZombieEvent(void);
 
-	void			setZombieType(std::string name);
+	void			setZombieType(std::string const &name);
 
-	Zombie			*newZombie(std::string name);
+	Zombie			*newZombie(std::string const &name);
 
 	void			randomChump(void);
 

@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 12:12:07 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 12:42:20 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 12:59:23 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ ZombieEvent::~ZombieEvent(void)
 {
 }
 
-void			ZombieEvent::setZombieType(std::string type)
+void			ZombieEvent::setZombieType(std::string const &type)
 {
 	_type = type;
 }
 
-Zombie			*ZombieEvent::newZombie(std::string name)
+Zombie			*ZombieEvent::newZombie(std::string const &name)
 {
 	return (new Zombie(name, _type));
 }

@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 12:12:07 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 12:39:53 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 12:59:09 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class	Zombie
 {
 public:
-	Zombie(std::string name, std::string type);
+	Zombie(std::string const &name, std::string const &type);
 	~Zombie(void);
 
 	void			announce();
