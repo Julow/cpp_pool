@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 13:43:21 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 14:00:22 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 14:09:37 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <sstream>
 
 Brain::Brain(void)
+	: _iq(120)
 {
 }
 
@@ -27,4 +28,9 @@ std::string		Brain::identify(void) const
 
 	str << (void*)this;
 	return (str.str());
+}
+
+int				Brain::getIq(void) const
+{
+	return (_iq);
 }
