@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 11:50:15 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/07 12:01:59 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/07 12:45:01 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,21 @@
 # define PONY_HPP
 
 # include <iostream>
+# include <string>
 
 class	Pony
 {
 public:
-	Pony(void);
+	Pony(std::string name);
 	~Pony(void);
+
+private:
+	Pony(void);
+
+	std::string		_name;
 };
 
-void			ponyOnTheHeap(void);
-void			ponyOnTheStack(void);
+void				ponyOnTheHeap(void);
+void				ponyOnTheStack(void);
 
 #endif
