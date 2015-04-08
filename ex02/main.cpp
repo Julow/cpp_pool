@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/08 15:54:32 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/08 16:43:05 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/08 19:34:42 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ int				main(void)
 	std::cout << a << std::endl;
 
 	std::cout << b << std::endl;
+
+	std::cout << (Fixed(10) + Fixed(2.555f)) << std::endl;
+	std::cout << b << " " << a << " = " << a / b << std::endl;
+	std::cout << b << " " << a << " = " << a / Fixed(0.005f) << std::endl;
 
 	std::cout << Fixed::max(a, b) << std::endl;
 

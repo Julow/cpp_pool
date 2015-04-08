@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/08 14:35:13 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/08 16:43:26 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/08 19:34:35 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,10 @@ int				Fixed::getFractPart(void) const
 */
 float			Fixed::toFloat(void) const
 {
-	return (((float)_n) / (1 << _fract));
+	float			f;
+
+	f = _n;
+	return (f / (1 << _fract));
 }
 
 int				Fixed::toInt(void) const
@@ -91,12 +94,12 @@ std::ostream	&operator<<(std::ostream &o, Fixed const &rhs)
 
 Fixed			Fixed::operator+(Fixed const &rhs) const
 {
-	return (Fixed(_n + rhs._n));
+	return (Fixed(toFloat() + rhs.toFloat()));
 }
 
 Fixed			Fixed::operator-(Fixed const &rhs) const
 {
-	return (Fixed(_n - rhs._n));
+	return (Fixed(toFloat() - rhs.toFloat()));
 }
 
 Fixed			Fixed::operator*(Fixed const &rhs) const
