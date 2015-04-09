@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/09 12:24:56 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/09 15:22:05 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/09 15:30:10 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	int					takeAttack(unsigned int amount);
 	void				beRepaired(unsigned int amount);
 
-	void				vaulthunter_dot_exe(std::string const &target);
+	void				challengeNewcomer(void);
 
 	ScavTrap			&operator=(ScavTrap const &rhs);
 

@@ -6,20 +6,19 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/09 12:25:00 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/09 15:25:17 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/09 15:36:16 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
 
-const char		*g_scavattacks[] = {
-	"Loling",
-	"BeADick",
-	"Blow",
-	"Gear",
-	"Termcap",
-	"Narwal",
+const char			*g_challs[] = {
+	"Kill them all",
+	"Report wide-aze",
+	"Destroy a session",
+	"Scroll with this mouse",
+	"Debug the intra",
 	NULL
 };
 
@@ -74,15 +73,9 @@ void				ScavTrap::beRepaired(unsigned int amount)
 	std::cout << "Repaired " << amount << " Hit points" << std::endl;
 }
 
-void				ScavTrap::vaulthunter_dot_exe(std::string const &target)
+void				ScavTrap::challengeNewcomer(void)
 {
-	if (_energyPoints < 25)
-	{
-		std::cout << "Can't attack: Out of energy" << std::endl;
-		return ;
-	}
-	_energyPoints -= 25;
-	std::cout << "Attack " << target << " with " << g_scavattacks[rand() % 5] << " attack" << std::endl;
+	std::cout << g_challs[rand() % 5] << std::endl;
 }
 
 ScavTrap			&ScavTrap::operator=(ScavTrap const &rhs)
