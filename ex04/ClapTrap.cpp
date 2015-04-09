@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/09 15:40:11 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/09 16:50:34 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/09 16:51:32 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ ClapTrap::ClapTrap(std::string const &name)
 
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
+	std::cout << "ClapTrap copy" << std::endl;
 	*this = src;
 }
 

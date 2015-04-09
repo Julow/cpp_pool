@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/09 15:40:11 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/09 15:55:54 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/09 16:51:23 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,18 @@ ClapTrap::ClapTrap(std::string const &name)
 	_energyPoints(0), _maxEnergyPoints(0), _level(1), _meleeDamage(0),
 	_rangedDamage(0), _armorReduction(0)
 {
+	std::cout << "ClapTrap construction" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
+	std::cout << "ClapTrap copy" << std::endl;
 	*this = src;
 }
 
 ClapTrap::~ClapTrap(void)
 {
+	std::cout << "ClapTrap destruction" << std::endl;
 }
 
 void				ClapTrap::rangedAttack(std::string const &target)
