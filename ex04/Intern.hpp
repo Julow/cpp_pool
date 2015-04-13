@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/13 18:12:50 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/13 18:35:48 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/13 18:23:13 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,10 @@
 class	Intern
 {
 public:
-	class	InternFiredException : public std::exception
-	{
-	public:
-		InternFiredException(void);
-		InternFiredException(InternFiredException const &src);
-		virtual ~InternFiredException(void) throw();
-
-		virtual const char	*what(void) const throw();
-
-	private:
-		InternFiredException	&operator=(InternFiredException const &rhs);
-	};
-
 	Intern(void);
 	virtual ~Intern(void);
 
-	Form			*makeForm(std::string const &name, std::string const &target) const throw(InternFiredException);
+	Form			*makeForm(std::string const &name, std::string const &target) const;
 
 protected:
 
