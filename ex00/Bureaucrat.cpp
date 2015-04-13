@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/13 14:14:49 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/13 15:39:19 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/13 16:05:45 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,35 @@ Bureaucrat			&Bureaucrat::operator--(void) throw(GradeTooLowException)
 	return (*this);
 }
 
+Bureaucrat::GradeTooHighException::GradeTooHighException(void)
+{
+}
+
+Bureaucrat::GradeTooHighException::GradeTooHighException(GradeTooHighException const &src)
+{
+	(void)src;
+}
+
+Bureaucrat::GradeTooHighException::~GradeTooHighException(void) throw()
+{
+}
+
 const char			*Bureaucrat::GradeTooHighException::what(void) const throw()
 {
 	return ("What: Grade Too Hight");
+}
+
+Bureaucrat::GradeTooLowException::GradeTooLowException(void)
+{
+}
+
+Bureaucrat::GradeTooLowException::GradeTooLowException(GradeTooLowException const &src)
+{
+	(void)src;
+}
+
+Bureaucrat::GradeTooLowException::~GradeTooLowException(void) throw()
+{
 }
 
 const char			*Bureaucrat::GradeTooLowException::what(void) const throw()

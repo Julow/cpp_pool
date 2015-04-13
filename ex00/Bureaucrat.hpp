@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/13 14:14:51 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/13 15:39:15 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/13 16:05:28 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,27 @@ public:
 	class	GradeTooHighException : public std::exception
 	{
 	public:
+		GradeTooHighException(void);
+		GradeTooHighException(GradeTooHighException const &src);
+		virtual ~GradeTooHighException(void) throw();
+
 		virtual const char	*what(void) const throw();
+
+	private:
+		GradeTooHighException	&operator=(GradeTooHighException const &rhs);
 	};
 
 	class	GradeTooLowException : public std::exception
 	{
 	public:
+		GradeTooLowException(void);
+		GradeTooLowException(GradeTooLowException const &src);
+		virtual ~GradeTooLowException(void) throw();
+
 		virtual const char	*what(void) const throw();
+
+	private:
+		GradeTooLowException	&operator=(GradeTooLowException const &rhs);
 	};
 
 	Bureaucrat(std::string const &name, int grade) throw(GradeTooHighException, GradeTooLowException);
