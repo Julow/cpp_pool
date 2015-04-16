@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/16 12:08:28 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/16 12:44:31 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/16 12:47:02 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void			Span::addNumber(int num) throw(std::overflow_error)
 int				Span::shortestSpan(void) const throw(std::underflow_error)
 {
 	std::vector<int>::const_iterator	it;
-	int							min;
+	int									min;
 
 	if (_vector.size() <= 1)
 		throw std::underflow_error("Not enougth numbers");
@@ -44,7 +44,7 @@ int				Span::shortestSpan(void) const throw(std::underflow_error)
 int				Span::longestSpan(void) const throw(std::underflow_error)
 {
 	std::vector<int>::const_iterator	it;
-	int							max;
+	int									max;
 
 	if (_vector.size() <= 1)
 		throw std::underflow_error("Not enougth numbers");
