@@ -6,7 +6,7 @@
 /*   By: jaguillo <jaguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/16 14:56:58 by jaguillo          #+#    #+#             */
-/*   Updated: 2015/04/16 17:01:51 by jaguillo         ###   ########.fr       */
+/*   Updated: 2015/04/16 17:10:17 by jaguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,14 @@ Mindopen::~Mindopen(void)
 }
 
 const Mindopen::s_inst		Mindopen::_insts[] = {
+	// {'+', &Mindopen::_queueInstRight},
+	// {'=', &Mindopen::_queueInstLeft},
+	// {'%', &Mindopen::_queueInstInc},
+	// {'^', &Mindopen::_queueInstDec},
+	// {'!', &Mindopen::_queueInstWrite},
+	// {'?', &Mindopen::_queueInstRead},
+	// {'@', &Mindopen::_queueInstLoop},
+	// {'\\', &Mindopen::_queueInstEndLoop},
 	{'>', &Mindopen::_queueInstRight},
 	{'<', &Mindopen::_queueInstLeft},
 	{'+', &Mindopen::_queueInstInc},
