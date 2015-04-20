@@ -1,0 +1,6 @@
+[submodule "ft_gkrellm"]
+	path = ft_gkrellm
+	url = https://github.com/Julow/ft_gkrellm.git
+[submodule "ft_retro"]
+	path = ft_retro
+	url = https://github.com/Julow/ft_retro.git
